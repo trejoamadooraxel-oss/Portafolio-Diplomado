@@ -160,3 +160,33 @@ for i in range(len(nuevos_valores)):
     print("Predicción de la red:", predicciones_nuevas[i][0])
     print("Valor real:", nuevos_valores[i][0] ** 2)
     print("-------------------------")
+
+
+'''
+¿Qué significa ajustar una función utilizando una red neuronal?
+Consiste en capacitar a la red para que descubra y comprenda el vínculo matemático existente entre los datos de entrada y salida. De esta manera, logra imitar el comportamiento de una función continua modificando sus pesos y sesgos.
+¿En qué se diferencian la clasificación y el ajuste de funciones?
+La clasificación se encarga de agrupar las entradas en categorías o etiquetas independientes (por ejemplo, identificar si una fotografía muestra un perro o un gato). En contraste, el ajuste de funciones —o regresión— calcula valores numéricos continuos basándose en las entradas (por ejemplo, estimar el valor continuo de y para cualquier x).
+¿Cuál fue la función matemática empleada en esta práctica?
+Se utilizó la función cuadrática y=x^2.
+¿Qué define a la variable X?
+Corresponde al conjunto de datos de entrada o variable independiente, los cuales están delimitados en el intervalo [-1,1].
+¿Qué indica la variable y?
+Hace referencia a los valores objetivo o salidas reales (variable dependiente) que se obtienen al resolver la ecuación y=x^2.
+¿Para qué sirven los pesos W_1 y W_2?
+Funcionan como parámetros ajustables que regulan la fuerza de las conexiones neuronales. Específicamente, W_1 pondera las señales que van hacia la capa oculta, mientras que W_2 hace lo propio desde la capa oculta hacia la capa de salida.
+¿Cuál es el propósito de los sesgos b_1 y b_2?
+Su función es desplazar la función de activación sobre el eje, brindando al modelo la flexibilidad necesaria para representar curvas que no cruzan obligatoriamente por el origen.
+¿Cuál es la utilidad de la función tangente hiperbólica?
+Corresponde a la función de activación no lineal (tanh) implementada en la capa oculta. Su propósito es aportar la no linealidad indispensable para que la red sea capaz de replicar trayectorias complejas, como la parábola y=x^2, algo inviable mediante operaciones puramente lineales.
+¿Qué evalúa el error cuadrático medio?
+Calcula la media de las diferencias al cuadrado entre los valores verdaderos (y) y las estimaciones emitidas por la red (y ˆ). Funciona como un indicador de pérdida para valorar la efectividad general del modelo.
+¿Qué significa que el error se reduzca durante la fase de entrenamiento?
+Evidencia que los procesos de propagación hacia atrás (backpropagation) y descenso de gradiente están optimizando de forma adecuada los parámetros (W y b). Como resultado, las estimaciones del modelo se vuelven cada vez más exactas y cercanas a los valores reales.
+¿Qué ilustra la gráfica que contrasta la función real frente a la ajustada?
+Muestra de manera visual la diferencia entre la parábola teórica y=x^2 y la traza estimada por la red neuronal, lo que facilita evaluar gráficamente el nivel de aprendizaje del patrón.
+¿La red neuronal consiguió aproximar la función de forma adecuada? ¿Por qué?
+Sí, el modelo alcanzó un nivel de aproximación sumamente exacto. Esto se comprueba al observar que el Error Cuadrático Medio se reduce de manera constante hasta cifras casi nulas a lo largo de las 5000 épocas, lo que permite que la curva estimada coincida prácticamente con la función real y=x^2, tanto en los datos de entrenamiento como en las evaluaciones con nuevos valores.
+
+
+'''
